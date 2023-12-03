@@ -68,20 +68,6 @@
 // Existing JavaScript code...
 // Make sure to remove any conflicting styles or resize logic
 
-function checkOrientation() {
-  var warningOverlay = document.getElementById('orientation-warning');
-  if (window.innerWidth < window.innerHeight) {
-    // Show the warning if in portrait mode
-    warningOverlay.style.display = 'flex';
-  } else {
-    // Hide the warning if in landscape mode
-    warningOverlay.style.display = 'none';
-  }
-}
-
-// Add event listeners for orientation change and initial load
-window.addEventListener("orientationchange", checkOrientation, false);
-window.addEventListener("load", checkOrientation, false);
 
 
 
@@ -138,6 +124,24 @@ window.addEventListener("load", checkOrientation, false);
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
+
+        function checkOrientationAndReload() {
+          var isPortrait = window.innerWidth < window.innerHeight;
+          if (isPortrait) {
+            // หากอยู่ในโหมดแนวตั้ง, แสดงข้อความแนะนำให้หมุนโทรศัพท์
+            var warningOverlay = document.getElementById('orientation-warning');
+            warningOverlay.style.display = 'flex';
+          } else {
+            // หากอยู่ในโหมดแนวนอน, รีเฟรชเพจ
+            location.reload();
+          }
+        }
+        
+        // เพิ่ม Event Listener สำหรับการเปลี่ยนแปลงการจัดวางหน้าจอ
+        window.addEventListener("orientationchange", checkOrientationAndReload);
+        
+
+        
 
         function resizeGame() {
           var gameAspectRatio = 960 / 600; // Game width/height
