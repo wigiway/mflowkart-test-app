@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="Mokey1" motionHint="adaptive" trackingMode="car" optimizeTrackingFor="default"/>
+
+</Tracking>
+
+<Assembly name="Mokey1s_assembly" assemblyId="97c5ce78252d4231ac0a911056e2c75f">
+<Part name="Mokey1" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="GuideView_0000" translation="0.00037054 14.5784 31.9863" rotation="AD: 1 -0.000494383 0.00616024 189.177" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0001" translation="-0.00313336 14.7718 30.6594" rotation="AD: -0.046896 -1.001 15.4541 179.978" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0002" translation="0.44197 14.6027 31.8199" rotation="AD: 0.998088 0.088299 -0.985911 187.277" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0003" translation="-0.4419 14.5705 31.9923" rotation="AD: 0.997518 -0.0985294 1.02877 187.611" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0004" translation="-0.293437 14.31 33.1235" rotation="AD: 0.999852 -0.0479666 0.387357 193.16" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0005" translation="0.382946 14.3829 32.84" rotation="AD: 0.99946 0.066889 -0.568878 191.65" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0006" translation="-0.357484 14.7483 38.3088" rotation="AD: 0.993413 -0.128443 1.98253 183.319" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0007" translation="0.346125 14.7502 38.294" rotation="AD: -0.993088 -0.131035 2.02254 176.734" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>
