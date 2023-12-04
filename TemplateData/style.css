@@ -62,7 +62,7 @@ body {
   width: 154px; /* กว้างของเฟรมเดี่ยว */
   height: 130px; /* สูงของเฟรมเดี่ยว */
   background: url("/image/tsssww.png") 0 0 no-repeat;
-  animation: spriteAnimation 1s steps(9) infinite;
+  animation: spriteAnimation 5s steps(9) infinite;
 }
 
 
