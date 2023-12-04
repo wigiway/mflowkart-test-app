@@ -42,11 +42,30 @@ body {
   transform: translate(-50%, -50%);
   display: none;
 }
-#unity-logo {
-  width: 154px;
-  height: 130px;
-  background: url("/image/tsssww.png") no-repeat center;
+
+@keyframes spriteAnimation {
+  0% { background-position: 0 0; }
+  10% { background-position: 154px 0; }
+  20% { background-position: 308px 0; }
+  30% { background-position: 462px 0; }
+  40% { background-position: 616px 0; }
+  50% { background-position: 770px 0; }
+  60% { background-position: 924px 0; }
+  70% { background-position: 1078px 0; }
+  80% { background-position: 1232px 0; }
+  90% { background-position: 1386px 0; }
+  100% { background-position: 1540px 0; }
+
 }
+
+#unity-logo {
+  width: 154px; /* กว้างของเฟรมเดี่ยว */
+  height: 130px; /* สูงของเฟรมเดี่ยว */
+  background: url("/image/tsssww.png") 0 0 no-repeat;
+  animation: spriteAnimation 1s steps(9) infinite;
+}
+
+
 #unity-progress-bar-empty {
   width: 141px;
   height: 18px;
