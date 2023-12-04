@@ -128,6 +128,68 @@ body {
     transform: translateX(-50%);
   }
 
+
+  #refreshOverlay {
+    position: fixed; /* ทำให้ปกคลุมหน้าจอทั้งหมด */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลังพร้อมความทึบแสง */
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    z-index: 1000; /* ให้แน่ใจว่าปรากฏทับเนื้อหาอื่นๆ */
+}
+
+#refreshContent {
+    text-align: center;
+    /* สไตล์เพิ่มเติมตามต้องการ */
+}
+
+/* สไตล์สำหรับปุ่ม, ข้อความ, และภาพอื่นๆ ภายใน #refreshContent */
+
+
+#refreshContent img {
+  margin-top: 100px;
+  width: 50px;
+  height: auto;
+}
+
+#refreshContent p {
+  color: white;
+  margin-top: 20px;
+}
+
+#refreshContent button {
+  margin-top: 20px;
+  /* สไตล์ปุ่มตามต้องการ */
+}
+
+#refreshButton {
+  font-size: 1.2em; /* ขนาดของตัวอักษรใหญ่ขึ้น */
+  padding: 10px 20px; /* การเพิ่มขนาดและระยะห่างภายในปุ่ม */
+  background-color: #f0261f; /* สีพื้นหลังของปุ่ม */
+  color: white; /* สีของตัวอักษร */
+  border: none; /* ไม่มีเส้นขอบ */
+  border-radius: 5px; /* ขอบปุ่มโค้งเล็กน้อย */
+  cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อวางบนปุ่ม */
+  transition: all 0.3s; /* สร้างการเปลี่ยนแปลงที่ลื่นไหล */
+}
+
+#refreshButton:hover {
+  background-color: #f0261f; /* สีพื้นหลังเมื่อวางเมาส์บนปุ่ม */
+}
+
+#refreshButton:active {
+  background-color: #f0261f; /* สีพื้นหลังเมื่อกดปุ่ม */
+  box-shadow: 0 5px #666; /* เงาใต้ปุ่มเมื่อกด */
+  transform: translateY(4px); /* ขยับปุ่มลงเล็กน้อยเมื่อกด */
+}
+
+
+
+
   @media not screen and (max-width: 600px) { /* Adjust the max-width as necessary */
     .unity-desktop #unity-fullscreen-button {
       position: absolute;

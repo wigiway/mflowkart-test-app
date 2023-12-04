@@ -22,6 +22,16 @@
         <div id="unity-fullscreen-button"></div>
       </div>
 
+      <div id="refreshOverlay" style="display:none;">
+        <div id="refreshContent">
+            <img src="image/refresh-button.png" alt="Refresh Button">
+            <p>แตะหน้าจอ 1 ครั้งเพื่อเล่นแนวนอน</p>
+            <p>Refresh the screen to play in landscape mode</p>
+            <button id="refreshButton" onclick="refreshPage()">Refresh</button>
+
+        </div>
+    </div>
+    
     
     
     
@@ -117,6 +127,42 @@
         document.getElementsByTagName('head')[0].appendChild(meta);
         container.className = "unity-mobile";
         canvas.className = "unity-mobile";
+      
+
+        function refreshPage() {
+          // เก็บสถานะการรีเฟรชลงใน Local Storage
+          localStorage.setItem('isRefreshClicked', 'true');
+      
+          // รีเฟรชหน้าจอ
+          location.reload();
+      }
+      
+      function checkOrientation() {
+          var isLandscape = window.innerWidth > window.innerHeight;
+          var refreshOverlay = document.getElementById('refreshOverlay');
+          var isRefreshClicked = localStorage.getItem('isRefreshClicked');
+      
+          if (isLandscape && isRefreshClicked !== 'true') {
+              refreshOverlay.style.display = 'block';
+          } else {
+              refreshOverlay.style.display = 'none';
+          }
+      }
+      
+      window.addEventListener("orientationchange", checkOrientation);
+      window.addEventListener("load", checkOrientation);
+      
+      // เมื่อหน้าเว็บโหลดเสร็จ, ล้างสถานะการรีเฟรช
+      window.addEventListener("load", function() {
+          localStorage.removeItem('isRefreshClicked');
+      });
+      
+
+
+
+
+    
+      
 
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
