@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | mflow-game-racing</title>
+    <title>M-FLOW KART มั่นใจว่าFLOWกว่าก็มาดิค้าบบ...คลิก!</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -19,9 +19,13 @@
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
-       
         <div id="unity-fullscreen-button"></div>
       </div>
+      <!-- เพิ่มลิงก์ Facebook Share Button ในตำแหน่งที่คุณต้องการ -->
+<div id="facebook-share-button">
+  <a href="#" onclick="shareOnFacebook()">Share FB</a>
+  <div id="unity-fullscreen-button"></div>
+</div>
 
       <div id="refreshOverlay" style="display:none;">
         <div id="refreshContent">
@@ -77,6 +81,19 @@
 // Make sure to remove any conflicting styles or resize logic
 
 
+function shareOnFacebook() {
+  // URL ของรูปภาพที่ต้องการแชร์
+  var imageUrl = "https://www.mflowkart.com/image/toWebLoad.jpg";
+
+  // URL ของเว็บไซต์ของคุณ
+  var websiteUrl = "https://www.mflowkart.com";
+
+  // สร้าง URL ของ Facebook Share Dialog พร้อมกับข้อมูลของรูปภาพ
+  var facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(websiteUrl) + "&picture=" + encodeURIComponent(imageUrl);
+
+  // เปิดหน้าต่าง Facebook Share Dialog
+  window.open(facebookShareUrl, "_blank", "width=600,height=400");
+}
 
 
 

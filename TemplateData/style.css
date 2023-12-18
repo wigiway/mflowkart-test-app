@@ -101,7 +101,7 @@ body {
 #unity-fullscreen-button {
   position: absolute; /* Position absolutely to place it at the bottom-right corner */
   right: 10px; /* Distance from the right edge of the game screen */
-  bottom: 10px; /* Distance from the bottom edge of the game screen */
+  bottom: -50px; /* Distance from the bottom edge of the game screen */
   cursor: pointer;
   width: 36px;
   height: 38px;
@@ -204,6 +204,41 @@ body {
   background-color: #f0261f; /* สีพื้นหลังเมื่อกดปุ่ม */
   box-shadow: 0 5px #666; /* เงาใต้ปุ่มเมื่อกด */
   transform: translateY(4px); /* ขยับปุ่มลงเล็กน้อยเมื่อกด */
+}
+
+/* ปรับแต่งสไตล์ของปุ่ม Facebook Share */
+#facebook-share-button {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  z-index: 1001; /* ให้ปุ่มอยู่ข้างบนของ Unity WebGL */
+}
+
+#facebook-share-button a {
+  display: block;
+  padding: 10px;
+  background-color: #4267B2; /* สีพื้นหลังของปุ่ม Facebook */
+  color: #fff; /* สีของตัวอักษร */
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#facebook-share-button a:hover {
+  background-color: #314c86; /* สีพื้นหลังเมื่อนำเมาส์ไปที่ปุ่ม */
+}
+
+/* ปรับแต่งสไตล์ของปุ่ม Facebook Share บนอุปกรณ์มือถือ */
+@media screen and (max-width: 600px) {
+  #facebook-share-button {
+    /* ปรับตำแหน่งหรือสไตล์ตามที่คุณต้องการในอุปกรณ์มือถือ */
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1001; /* ให้ปุ่มอยู่ข้างบนของ Unity WebGL */
+  }
 }
 
 
