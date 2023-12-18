@@ -26,10 +26,12 @@
   <a href="#" onclick="shareOnFacebook()">Share FB</a>
   <div id="unity-fullscreen-button"></div>
 </div>
-
+<div id="facebook-share-button-desktop">
+  <a href="#" onclick="shareOnFacebook()">Share FB</a>
+</div>
       <div id="refreshOverlay" style="display:none;">
         <div id="refreshContent">
-            <img src="image/refresh-button.png" alt="Refresh Button">
+            <img src="image/a1.png" alt="Refresh Button">
             <p>แตะหน้าจอ 1 ครั้งเพื่อเล่นแนวนอน</p>
             <p>Refresh the screen to play in landscape mode</p>
             <button id="refreshButton" onclick="refreshPage()">Refresh</button>
@@ -49,6 +51,8 @@
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
+      
+      var fbDesktop = document.querySelector("#facebook-share-button-desktop");
 
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
@@ -83,7 +87,7 @@
 
 function shareOnFacebook() {
   // URL ของรูปภาพที่ต้องการแชร์
-  var imageUrl = "https://www.mflowkart.com/image/toWebLoad.jpg";
+  var imageUrl = "https://www.mflowkart.com/image/a1.jpg";
 
   // URL ของเว็บไซต์ของคุณ
   var websiteUrl = "https://www.mflowkart.com";
@@ -154,6 +158,11 @@ function shareOnFacebook() {
           // รีเฟรชหน้าจอ
           location.reload();
       }
+
+      function offFBDesktop() {
+        fbDesktop.style.display = 'none';
+      }
+      offFBDesktop();
       
       function checkOrientation() {
           var isLandscape = window.innerWidth > window.innerHeight;
@@ -229,6 +238,18 @@ function shareOnFacebook() {
 
         canvas.style.width = "960px";
         canvas.style.height = "600px";
+
+        // ในส่วนของ script ของคุณ
+function hideButtonSomething() {
+  var buttonSomething = document.getElementById('facebook-share-button');
+  if (buttonSomething) {
+    buttonSomething.style.display = 'none';
+  }
+}
+
+// เรียกใช้ฟังก์ชันเมื่อต้องการซ่อน element
+hideButtonSomething();
+
       }
 
       loadingBar.style.display = "block";
