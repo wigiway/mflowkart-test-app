@@ -208,16 +208,14 @@ body {
 
 #facebook-share-button {
   position: fixed;
-  bottom: 70px;
+  bottom: 20px;
   right: 10px;
   z-index: 1001; /* ให้ปุ่มอยู่ข้างบนของ Unity WebGL */
 }
 
 #facebook-share-button a {
   display: block;
-  padding: 10px;
-  background-color: #4267B2; /* สีพื้นหลังของปุ่ม Facebook */
-  color: #fff; /* สีของตัวอักษร */
+  background-color: #0d275c; /* สีพื้นหลังของปุ่ม Facebook */
   text-decoration: none;
   border-radius: 5px;
   text-align: center;
@@ -232,20 +230,22 @@ body {
 
 
 #facebook-share-button-desktop {
-  position: fixed;
-  bottom: 10px;
-  z-index: 1; /* ให้ปุ่มอยู่ข้างบนของ Unity WebGL */
+  position: absolute; /* Position absolutely to place it at the bottom-right corner */
+  right: 220px; /* Distance from the right edge of the game screen */
+  bottom: -350px; /* Distance from the bottom edge of the game screen */
+  cursor: pointer;
+  width: 36px;
+  height: 38px;
 }
 
 
 #facebook-share-button-desktop a {
   display: block;
-  width: 150px;
-  padding: 20px;
-  background-color: #4267B2; /* สีพื้นหลังของปุ่ม Facebook */
+  width: 250px;
+  padding: 5px;
   color: #fff; /* สีของตัวอักษร */
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 25px;
   text-align: center;
   font-weight: bold;
   font-size: 20px;
@@ -253,7 +253,7 @@ body {
 }
 
 #facebook-share-button-desktop a:hover {
-  background-color: #155cf7; /* สีพื้นหลังเมื่อนำเมาส์ไปที่ปุ่ม */
+  background-color: #105cff; /* สีพื้นหลังเมื่อนำเมาส์ไปที่ปุ่ม */
 }
 
 
