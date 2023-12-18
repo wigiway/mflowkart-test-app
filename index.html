@@ -31,7 +31,6 @@
 </div>
       <div id="refreshOverlay" style="display:none;">
         <div id="refreshContent">
-            <img src="image/a1.png" alt="Refresh Button">
             <p>แตะหน้าจอ 1 ครั้งเพื่อเล่นแนวนอน</p>
             <p>Refresh the screen to play in landscape mode</p>
             <button id="refreshButton" onclick="refreshPage()">Refresh</button>
@@ -93,7 +92,8 @@ function shareOnFacebook() {
   var websiteUrl = "https://www.mflowkart.com";
 
   // สร้าง URL ของ Facebook Share Dialog พร้อมกับข้อมูลของรูปภาพ
-  var facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(websiteUrl) + "&picture=" + encodeURIComponent(imageUrl);
+  var facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + websiteUrl + "&picture=" + imageUrl;
+
 
   // เปิดหน้าต่าง Facebook Share Dialog
   window.open(facebookShareUrl, "_blank", "width=600,height=400");
