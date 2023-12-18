@@ -4,6 +4,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta property="og:url" content="https://www.mflowkart.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mflowkart" />
+    <meta property="og:description" content="Game Mflow kart มั่นใจว่าFLOWกว่าก็มาดิค้าบบ" />
+    <meta property="og:image" content="https://i.postimg.cc/c1KCpPpK/to-Web-Load.jpg" />
+
     <title>M-FLOW KART มั่นใจว่าFLOWกว่าก็มาดิค้าบบ...คลิก!</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
@@ -85,19 +92,15 @@
 
 
 function shareOnFacebook() {
-  // URL ของรูปภาพที่ต้องการแชร์
   var imageUrl = "https://i.postimg.cc/c1KCpPpK/to-Web-Load.jpg";
-
-  // URL ของเว็บไซต์ของคุณ
   var websiteUrl = "https://www.mflowkart.com";
 
-  // สร้าง URL ของ Facebook Share Dialog พร้อมกับข้อมูลของรูปภาพ
-  var facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + websiteUrl + "&picture=" + imageUrl;
+  // ปรับปรุง URL ของ Facebook Share Dialog โดยใส่ข้อมูลทั้งหมดใน parameter
+  var facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(websiteUrl) + "&quote=คำอธิบายเว็บไซต์ของคุณ&picture=" + encodeURIComponent(imageUrl);
 
-
-  // เปิดหน้าต่าง Facebook Share Dialog
   window.open(facebookShareUrl, "_blank", "width=600,height=400");
 }
+
 
 
 
